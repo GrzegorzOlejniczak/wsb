@@ -1,0 +1,129 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //zad2
+
+            //double a, b, c, wynik;
+            //Console.WriteLine("podaj a: ");
+            //a = double.Parse(Console.ReadLine());
+            //Console.WriteLine("podaj b: ");
+            //b = double.Parse(Console.ReadLine());
+            //Console.WriteLine("podaj c: ");
+            //c = double.Parse(Console.ReadLine());
+
+            //if (c > 0)
+            //{
+            //    wynik = (Math.Pow(a, 2) + b);
+
+            //    Console.Write(wynik);
+
+
+            //}
+            //else if (c < 0)
+            //{
+
+            //    wynik = (a - Math.Pow(b, 2));
+            //    Console.Write(wynik);
+            //}
+            //else if (c == 0)
+            //{
+            //    if (a - b == 0)
+            //    {
+            //        Console.Write("próba dzielenia przez 0 ");
+            //    }
+            //    else
+            //    {
+            //        Console.Write(1 / a - b);
+            //    }
+            //}
+
+
+
+            //zad3
+
+            //double a, b, c, wynik;
+            //Console.WriteLine("podaj a: ");
+            //a = double.Parse(Console.ReadLine());
+            //Console.WriteLine("podaj b: ");
+            //b = double.Parse(Console.ReadLine());
+            //Console.WriteLine("podaj c: ");
+            //c = double.Parse(Console.ReadLine());
+
+
+
+
+            //zad3 bez operacji dzielnia
+            // uint a, b, wynik;
+            // Console.WriteLine("podaj a: ");
+            // a = uint.Parse(Console.ReadLine());
+            // Console.WriteLine("podaj b: ");
+            // b = uint.Parse(Console.ReadLine());
+            // Console.WriteLine("podaj c: ");
+            //// c = uint.Parse(Console.ReadLine());
+
+
+            // if (b > a)
+            // {
+            //     uint c = a;
+            //     a = b;
+
+            //     b = c;
+
+
+
+            // }
+            // while (a >= b)
+            // {
+
+            //     a -= b;
+
+            //     if (a < b)
+            //     {
+            //         uint c = a;
+            //         a = b;
+            //         b = a;
+            //     }
+            //     if(b == 0)
+            //     {
+            //         Console.Write("wartość NWD wynosi: " + a);
+            //         break;
+            //     }
+
+
+
+
+            // }
+                
+
+
+
+
+
+            uint a, b,c, wynik;
+            Console.WriteLine("podaj a: ");
+            a = uint.Parse(Console.ReadLine());
+            Console.WriteLine("podaj b: ");
+             b = uint.Parse(Console.ReadLine());
+
+
+
+
+
+            while(a%b != 0)
+            {
+                c = a % b;
+                a = b;
+                b = c;
+
+            }
+            Console.Write("NWD: " + b);
+
+        }
+    }
+}
