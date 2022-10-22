@@ -50,6 +50,28 @@ namespace kolkokrzyzyk
             //        break;
             //}
 
+            
+            
+            
+            int a, b,c;
+            Console.Write("podaj liczbe 1: ");
+            a = int.Parse(Console.ReadLine());
+
+
+            Console.Write("podaj liczbe 2: ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("podaj liczbe 3: ");
+            c = int.Parse(Console.ReadLine());
+
+            int[] tab = { a, b, c };
+
+
+            Array.Sort(tab);
+
+            for(int i=0; i<tab.Length; i++)
+            {
+                Console.Write(tab[i]+" ");
+            }
 
 
 
