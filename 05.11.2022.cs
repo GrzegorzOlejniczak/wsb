@@ -153,7 +153,9 @@ namespace ConsoleApp13
             for (int i = 0; i < tab.Length; i++)
             {
                 
-                Console.Write(tab[i]+",");
+                
+                if(i==tab.Length-1) Console.Write(tab[i]);
+                else Console.Write(tab[i] + ",");
             }
 
 
@@ -164,7 +166,8 @@ namespace ConsoleApp13
 
             for(int i = tab.Length-1; i>=0; i--)
             {
-                Console.Write(tab[i]+",");
+                if (i == tab.Length - 1) Console.Write(tab[i]);
+                else Console.Write(tab[i] + ",");
             }
         }
     }
