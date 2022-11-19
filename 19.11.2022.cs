@@ -173,9 +173,10 @@ namespace ConsoleApp16
             }
 
             Console.WriteLine("Posortowana tablica: ");
+            double[] posortowanaTablica = sortowanie(tab);
             for(int i=0; i <n; i++)
             {
-                Console.WriteLine(sortowanie(tab)[i]);
+                Console.WriteLine(posortowanaTablica[i]);
             }
             
             
