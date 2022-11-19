@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ConsoleApp16
 {
@@ -65,7 +65,7 @@ namespace ConsoleApp16
 
             */
 
-
+            /*
 
             uint liczbaWPrzedziale(uint[] tab, int a, int b)
             {
@@ -74,7 +74,7 @@ namespace ConsoleApp16
                 {
                     if (liczba >= a && liczba <= b)
                     {
-                        return liczba;
+                        Console.WriteLine(liczba);
                         licznik++;
                     }
                 }
@@ -93,6 +93,7 @@ namespace ConsoleApp16
             for(int i=0; i<a; i++)
             {
                 tab[i] = (uint)random.Next();
+                //Console.
                 
 
             }
@@ -107,7 +108,77 @@ namespace ConsoleApp16
 
             Console.WriteLine(liczbaWPrzedziale(tab, x, y));
 
+            */
 
+            //zad4
+            /*
+
+            uint NWD_iteracyjnie(int a, int b)
+            {
+                while (a != b)
+                {
+                    if (a > b) a = a - b;
+                    else b = b - a;
+                }
+                return (uint)b;
+                
+
+            }
+
+            uint NWD_rek(int a, int b)
+            {
+                if (a == b) return (uint)a;
+                else if (a > b) return NWD_rek(a - b, b);
+                else return NWD_rek(a, b - a);
+
+            }
+
+            Console.WriteLine(NWD_iteracyjnie(10, 5));
+            Console.WriteLine(NWD_rek(10, 5));
+
+
+            */
+
+
+            double[] sortowanie(double[] tab)
+            {
+                  for(int i=0; i<tab.Length; i++)
+                  {
+                        for(int j=i+1; j<tab.Length; j++)
+                        {
+                            if (tab[i] > tab[j])
+                            {
+                            double temp = tab[i];
+                            tab[i] = tab[j];
+                            tab[j] = temp;
+
+                            }   
+                        }
+                  }
+                return tab;
+
+
+
+            }
+
+            Console.WriteLine("podaj długość ciągu: ");
+            uint n = uint.Parse(Console.ReadLine());
+            double[] tab = new double[n];
+            Console.WriteLine("Podaj elementy tablicy: ");
+
+        
+            for(int i=0; i<n; i++)
+            {
+                tab[i] = uint.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Posortowana tablica: ");
+            for(int i=0; i <n; i++)
+            {
+                Console.WriteLine(sortowanie(tab)[i]);
+            }
+            
+            
 
             
 
