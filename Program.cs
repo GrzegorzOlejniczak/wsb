@@ -1,171 +1,120 @@
-using System;
+﻿using System;
 
-namespace ConsoleApp13
+namespace ConsoleApp16
 {
     class Program
     {
         static void Main(string[] args)
         {
+            //zad5
             /*
-            double a, b;
-            char x;
-            bool czyNieWlasciwyZnak = false;
+            Console.Write("Podaj n:");
+            int x = int.Parse(Console.ReadLine());
+            int wylosowanaLiczba;
+            Random random = new Random();
 
-            Console.Write("Podaj pierwszą liczbę: ");
-            a = double.Parse(Console.ReadLine());
-            Console.Write("Podaj znak operacji: ");
-            x = char.Parse(Console.ReadLine());
-            Console.Write("Podaj drugą liczbę: ");
-            b = double.Parse(Console.ReadLine());
+            int max = 1, min = 100;
 
-            while (czyNieWlasciwyZnak == true)
+            while (x>0)
             {
 
-                switch (x)
-                {
-                    case '+':
-                        Console.WriteLine(a + b);
+            wylosowanaLiczba = random.Next(1, 101);
+                Console.WriteLine(wylosowanaLiczba);
 
-                        break;
-                    case '-':
-                        Console.WriteLine(a - b);
+                if (wylosowanaLiczba > max) max = wylosowanaLiczba;
 
-                        break;
-                    case '*':
-                        Console.WriteLine(a * b);
+                if (wylosowanaLiczba < min) min = wylosowanaLiczba;
 
-                        break;
+                x--;
 
-                    case '/':
-                        if (b == 0)
-                        {
-                            Console.Write("Nie można dzielić przez 0");
-                        }
-                        else
-                        {
-                            Console.WriteLine(a / b);
-
-                        }
-
-                        break;
-                    default:
-                        {
-                            Console.Write("Podano zły znak");
-                            break;
-                        }
-                }
             }
+            Console.WriteLine("max: " + max + " min: " + min);
+
+             */
+            /*
+            void procedura()
+            {
+                int a, b;
+                char znak;
+
+                Console.Write("podaj a: ");
+                a = int.Parse(Console.ReadLine());
+
+                Console.Write("podaj b: ");
+                b = int.Parse(Console.ReadLine());
+
+
+                Console.WriteLine(a + b);
+                Console.WriteLine(a - b);
+                Console.WriteLine(a * b);
+
+            if (b == 0) Console.WriteLine("nie można dzielić przez 0");
+                else Console.WriteLine(a / b);
+
+            }
+
+
+
+            do
+            {
+            procedura();
+                Console.WriteLine("Czy chcesz wprowadzić kolejne liczby? t/n: ");
+                
+            } while (Console.ReadLine()=="t");
+
+
             */
 
 
 
-            //Liczba pierwsza
-            /*
-            int n;
-            bool czyPierwsza = true;
-            Console.Write("Podaj liczbę: ");
-            n = int.Parse(Console.ReadLine());
-
-
-            for(uint dzielnik = 2; dzielnik<=Math.Sqrt(n); dzielnik++)
+            uint liczbaWPrzedziale(uint[] tab, int a, int b)
             {
-                if (n % dzielnik == 0)
+                uint licznik = 0;
+                foreach(uint liczba in tab)
                 {
-                    czyPierwsza = false;
-                Console.Write("Liczba " + n + " jest liczbą złożoną");
-                    break;
-
+                    if (liczba >= a && liczba <= b)
+                    {
+                        return liczba;
+                        licznik++;
+                    }
                 }
-            }
-            if (czyPierwsza)
-            {
-                Console.Write("Liczba jest pierwsza");
+                return licznik;
             }
 
-            */
-            //suma szescianow liczb miedzu n a m 
+            uint[] tab = { 3, 4, 5 };
 
+            Console.WriteLine("Podaj n:");
+            int a = int.Parse(Console.ReadLine());
 
-            /*
-            int n=0, m;
-            int suma=0;
-            Console.Write("Podaj n: ");
-            while (true)
+            int[] tab1 = new int[a];
+
+            Random random = new Random();
+
+            for(int i=0; i<a; i++)
             {
-                try
-                {
-                    n = int.Parse(Console.ReadLine());
-                    break;
-                }
-                catch (FormatException FormatException)
-                {
-                    Console.WriteLine(FormatException.Message);
-                }
-                catch(OverflowException OverflowException)
-                {
-                    Console.WriteLine(OverflowException.Message);
-                }
-                catch(Exception)
-                {
-                    Console.WriteLine("Jakis inny wyjatek");
-                }
+                tab[i] = (uint)random.Next();
+                
+
             }
 
-            Console.Write("Podaj m: ");
-            m = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Podaj a: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj b; ");
+            int y = int.Parse(Console.ReadLine());
+
+
+
+            Console.WriteLine(liczbaWPrzedziale(tab, x, y));
+
+
+
             
-            for(int i =n; i<=m; i++)
-            {
-                suma += (int)Math.Pow(i, 3);
-            }
-
-            Console.Write(suma);
-
-            */
-
-            int n;
-            Console.Write("Podaj długość ciągu:");
-            n = int.Parse(Console.ReadLine());
 
 
-
-            double[] tab = new double[n];
-
-
-            for(int i=0; i<n; i++)
-            {
-                Console.WriteLine("Podaj liczbe o indeksie " + i + " :");
-                tab[i] = double.Parse(Console.ReadLine());
-                
-            }
-
-            Console.WriteLine();
-            Console.Write("Kolumna: ");
-            for(int i =0; i<tab.Length; i++)
-            {
-                Console.WriteLine();
-                Console.Write(tab[i]);
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-
-            Console.Write("Wiersz: ");
-            for (int i = 0; i < tab.Length; i++)
-            {
-                
-                Console.Write(tab[i]+",");
-            }
-
-
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.Write("odwrotna kolejność: ");
-
-
-            for(int i = tab.Length-1; i>=0; i--)
-            {
-                Console.Write(tab[i]+",");
-            }
         }
-    }
+
+    }   
+
+    
 }
