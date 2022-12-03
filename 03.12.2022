@@ -45,6 +45,7 @@ namespace ConsoleApp23
             {
 
                 string naglowek = sr.ReadLine();
+                string[] elementyNaglowka = naglowek.Split(";");
                 while (!sr.EndOfStream)
                 {
                 Console.WriteLine(sr.ReadLine());
