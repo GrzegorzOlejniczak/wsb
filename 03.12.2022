@@ -43,6 +43,8 @@ namespace ConsoleApp23
             Directory.CreateDirectory(nowyFolder);
             using (StreamReader sr = new StreamReader(sciezka))
             {
+
+                string naglowek = sr.ReadLine();
                 while (!sr.EndOfStream)
                 {
                 Console.WriteLine(sr.ReadLine());
