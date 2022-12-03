@@ -1,5 +1,18 @@
+POZMIENIAJCIE COŚ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-uint a, b;
+
+using System;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            //ZAD1
+            uint a, b;
             Console.Write("Podaj a: ");
            
             
@@ -15,8 +28,8 @@ uint a, b;
                 }
                 catch (FormatException FormatException)
                 {
-                    Console.WriteLine(FormatException.Message);
-                    ;
+                    Console.WriteLine("Podano nieprawidłowe dane wejściowe");
+                    Console.Write("Podaj a: ");
                     
                 }
                 
@@ -35,3 +48,55 @@ uint a, b;
                     Console.WriteLine();
 
             }
+
+
+
+            //ZAD2
+
+
+            Random random = new Random();
+            int randomNumber1;
+            
+
+            int suma = 0;
+            int avg;
+            int[] tab = new int[3];
+            for(int i =0; i<20; i++)
+            {
+                if (i < 3)
+                {
+
+
+                    randomNumber1 = random.Next(1, 1001);
+                    suma += randomNumber1;
+                    Console.WriteLine(randomNumber1);
+
+
+                }
+                else
+                {
+
+                    avg = suma / tab.Length;
+                    randomNumber1 = random.Next(1, 1001);
+                    if (randomNumber1 > avg)
+                    {
+                        Console.WriteLine("Wylosowano "+randomNumber1 + " Ta liczba jest większa niż średnia z poprzednich trzech");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Wylosowano " + randomNumber1);
+                    }
+                
+
+
+
+                }
+                
+
+
+
+            }
+
+        }
+    }
+}
