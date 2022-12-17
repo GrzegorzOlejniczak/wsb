@@ -1,0 +1,133 @@
+using System;
+using System.IO;
+
+namespace ConsoleApp29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+
+            //double[] tab  = { 1, 2, 3, 4, 5, 6, 7 };
+
+            //double[] kopia = (double[])tab.Clone();
+
+
+            //int* a;
+            //int b = 5;
+
+            //a = &b;
+
+            //Console.WriteLine("Wartość b: " + b);
+            //Console.WriteLine("Adres w pamięci "+(int)a);
+
+            //int d = 10;
+            //int* c = &d;
+
+            //b = d;
+
+            //*a = *c;
+            //Console.WriteLine("wartość b: " + b);
+
+
+            //Console.Write("POdaj ścieżkę do pliku : ");
+            //string sciezka = "C:\\Users\\student\\Downloads\\dane.csv";
+
+
+            //string folder = Path.GetDirectoryName(sciezka);
+            //string nazwaPlikuBezRoz = Path.GetFileNameWithoutExtension(sciezka);
+            //string nowyFolder = Path.Combine(folder, nazwaPlikuBezRoz);
+            //Console.WriteLine(nowyFolder);
+            //Directory.CreateDirectory(nowyFolder);
+
+            //using (StreamReader sr = new StreamReader(sciezka))
+            //{
+            //    string naglowek = sr.ReadLine();
+            //    string[] elementyNaglowka = naglowek.Split(";");
+
+
+            //    for (int i = 0; i < elementyNaglowka.Length; i++)
+            //    {
+
+            //        string plik = Path.Combine(nowyFolder, elementyNaglowka[i] + ".csv");
+            //        if (File.Exists(plik)) Console.WriteLine("Istnieje taki plik");
+            //    }
+
+
+            //    while (!sr.EndOfStream)
+            //    {
+            //        string linia = sr.ReadLine();
+            //        //Console.WriteLine(sr.ReadLine());
+            //        string[] elementyLini = linia.Split(";");
+            //        for (int i =0; i<elementyNaglowka.Length; i++)
+            //        {
+
+            //             string plik = Path.Combine(nowyFolder, elementyNaglowka[i] + ".csv");
+            //            using (StreamWriter sw = new StreamWriter(plik, true))
+            //            {
+            //                sw.WriteLine(elementyLini[i]);
+            //            }
+            //        }
+
+            //    }
+            //}
+
+            //zad6
+            //Napisz program, który odczytuje kolejne słowa wpisywane przez użytkownika i zapisuje je do dziennika pokładowego>
+            //Aby uruchomic zpias do dziennika należy wpisać polecenie Start aby zakonczyc zapois do dziennika nalezy wpisac polecenie stop
+            //po zakonczeniu wpisu powinien byc stworzony plik o nazwie data.txt w ktorym znajjduje sie w postaci :
+            //Captain's log 
+            //star date 
+            //tresc wpisu
+            //  Jean - Luc Picard
+
+
+            //Console.WriteLine("Wpisz START w celu rozpoczęcia zapisu: ");
+            //string odp = Console.ReadLine().ToLower();
+            //string data = DateTime.Now.ToString("MM/dd/yyyy");
+
+            
+            //if (odp == "start")
+            //{
+            //    using (StreamWriter sw = new StreamWriter(data + ".txt"))
+            //    {
+            //        sw.WriteLine("Captain's log");
+            //        sw.WriteLine("Stardate"+data);
+            //        string wpis = Console.ReadLine();
+
+            //        while (wpis != "stop")
+            //        {
+            //            sw.WriteLine(wpis);
+            //            wpis = Console.ReadLine();
+            //        }
+            //        sw.WriteLine(wpis);
+
+            //    }
+
+            //}
+
+
+            //czyszczenie pustych podakatalogów danego katalogu
+
+
+            string sciezka = "C:\\Users\\student\\Downloads\\test";
+
+            void czyszczenie(string sciezka)
+            {
+                string[] podkatalogi = Directory.GetDirectories(sciezka);
+                foreach (string folder in Directory.GetDirectories(sciezka))
+                {
+                    czyszczenie(folder);
+                }
+                podkatalogi = Directory.GetDirectories(sciezka);
+               //if (Directory.GetDirectories(sciezka).Length == 0 && podkatalogi.Length == 0) Directory.Delete(sciezka);
+            }
+                czyszczenie(sciezka);
+
+
+            Console.Write("asdasdasd \n" + "asdasdasdasd");
+        }
+    }
+}
