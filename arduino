@@ -1,0 +1,71 @@
+const int czerwonyLED = 8; //Czerwone Dla Samochodu
+const int zoltyLED = 3; //Zółte Dla Samochodu
+const int zielonyLED = 4; //Zielone Dla Samochodu
+
+const int pieszyCzerwone = 5; //Czerwone Dla Pieszych
+const int pieszyZielone = 6; //Zielone Dla Pieszych
+
+const int przycisk = 7; //Przycisk
+
+void setup() {
+
+ //ustawienie wejścia/wyjścia
+  pinMode(czerwonyLED, OUTPUT);
+  pinMode(zoltyLED, OUTPUT);
+  pinMode(zielonyLED, OUTPUT);
+  pinMode(pieszyCzerwone, OUTPUT);
+  pinMode(pieszyZielone, OUTPUT);
+  pinMode(przycisk, INPUT_PULLUP);
+  
+  //Stan Początkowy
+  digitalWrite(czerwonyLED, LOW);
+  digitalWrite(zoltyLED, LOW);
+  digitalWrite(zielonyLED, HIGH);
+  digitalWrite(pieszyCzerwone, HIGH);
+  digitalWrite(pieszyZielone, LOW);
+}
+
+void loop() {
+  if (digitalRead(przycisk) == HIGH) { //naciśnięcie przycisku przez pieszego
+    delay(300); 
+    digitalWrite(zielonyLED, LOW);
+    digitalWrite(zoltyLED, HIGH);
+    delay(2000);
+    digitalWrite(zoltyLED, LOW);
+    digitalWrite(czerwonyLED, HIGH);
+    delay(1000);
+    //digitalWrite(zoltyLED, LOW);
+    //(zielonyLED, HIGH);
+    
+    // ŚWIATŁO DLA AUT CZERWONE
+    delay(1000);
+    digitalWrite(pieszyCzerwone, LOW);
+    digitalWrite(pieszyZielone, HIGH);
+    // PIESZY MA ZIEL 30 SEKUND
+    delay(13000);
+    
+    // MRUGANIE
+    for (int i = 0; i < 5; i++) {
+      digitalWrite(pieszyZielone, LOW);
+      delay(500);
+      digitalWrite(pieszyZielone, HIGH);
+      delay(500);
+    }
+    
+    // Po świetle dla pieszych
+    digitalWrite(pieszyZielone, LOW);
+    digitalWrite(pieszyCzerwone, HIGH);
+    
+    delay(1000);
+    
+    digitalWrite(zoltyLED, HIGH);
+    delay(1000);
+    
+    // STAN POCZĄTKOWY
+    digitalWrite(czerwonyLED, LOW);
+    digitalWrite(zoltyLED, LOW);
+    digitalWrite(zielonyLED, HIGH);
+    digitalWrite(pieszyCzerwone, HIGH);
+    digitalWrite(pieszyZielone, LOW);
+  }
+}
