@@ -1,0 +1,17 @@
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.csproj.AssemblyReference.cache
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.Form1.resources
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.csproj.GenerateResource.cache
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.GeneratedMSBuildEditorConfig.editorconfig
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.AssemblyInfoInputs.cache
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.AssemblyInfo.cs
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.csproj.CoreCompileInputs.cache
+G:\Desktop\C#\WinFormsApp632\bin\Debug\net6.0-windows\WinFormsApp632.exe
+G:\Desktop\C#\WinFormsApp632\bin\Debug\net6.0-windows\WinFormsApp632.deps.json
+G:\Desktop\C#\WinFormsApp632\bin\Debug\net6.0-windows\WinFormsApp632.runtimeconfig.json
+G:\Desktop\C#\WinFormsApp632\bin\Debug\net6.0-windows\WinFormsApp632.dll
+G:\Desktop\C#\WinFormsApp632\bin\Debug\net6.0-windows\WinFormsApp632.pdb
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.dll
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\refint\WinFormsApp632.dll
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.pdb
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\WinFormsApp632.genruntimeconfig.cache
+G:\Desktop\C#\WinFormsApp632\obj\Debug\net6.0-windows\ref\WinFormsApp632.dll
